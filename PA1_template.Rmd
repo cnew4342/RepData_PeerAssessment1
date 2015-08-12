@@ -1,8 +1,14 @@
+Peer Assessment Project #1 for Reproducible Research
+==============================================================================
+
+# Activity Data on Steps Per Day within 5 Minute Intervals
 ---
 title: "PA1_template.Rmd"
 author: "Carl Newman"
 date: "August 8, 2015"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 ```{R chunk0, echo = FALSE, results = "hide", message = FALSE}
 library(ggplot2)
