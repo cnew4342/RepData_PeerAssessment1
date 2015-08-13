@@ -10,14 +10,20 @@ output:
   html_document: 
     keep_md: yes
 ---
-```{R chunk0, echo = FALSE, results = "hide", message = FALSE}
+```{r chunk0, echo = FALSE, results = "hide", message = FALSE}
 library(ggplot2)
 library(dplyr)
 library(lubridate)
+library(downloader)
 ```
 ## Loading and preprocessing the data
-Read activity.csv File & display file structure.
+* Download data package.  
+* Unzip package.  
+* Read activity.csv File & display file structure.  
 ```{r chunk1}
+url <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+download(url, dest="dataset.zip", mode="wb") 
+unzip ("dataset.zip", exdir = "./")
 actdata <- read.csv("activity.csv")
 str(actdata)
 summary(actdata)

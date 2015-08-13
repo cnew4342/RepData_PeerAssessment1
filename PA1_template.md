@@ -12,9 +12,14 @@ output:
 ---
 
 ## Loading and preprocessing the data
-Read activity.csv File & display file structure.
+* Download data package.  
+* Unzip package.  
+* Read activity.csv File & display file structure.  
 
 ```r
+url <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+download(url, dest="dataset.zip", mode="wb") 
+unzip ("dataset.zip", exdir = "./")
 actdata <- read.csv("activity.csv")
 str(actdata)
 ```
